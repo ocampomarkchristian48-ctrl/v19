@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mind Logic</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sky3d"></div>
+
+<h1 class="title">Mind Logic</h1>
+
+<!-- START SCREEN -->
+<div class="card" id="startScreen">
+
+<h2>🧠 Mind Logic</h2>
+
+<input type="text" id="playerName" placeholder="Enter your name">
+
+<button onclick="startGame()">Play</button>
+
+</div>
+
+<!-- TOPIC SCREEN -->
+<div class="topic hidden" id="topicScreen">
+
+<h2>Select Topic</h2>
+
+<button onclick="selectTopic('probability')">Probability</button>
+<button onclick="selectTopic('group')">Group Theory</button>
+<button onclick="selectTopic('predicate')">Predicate Logic</button>
+<button onclick="selectTopic('counting')">Counting Theory</button>
+
+</div>
+
+<!-- QUIZ SCREEN -->
+<div class="quiz hidden" id="quizScreen">
+
+<h2 id="question">Question here</h2>
+
+<div id="answers"></div>
+
+<button id="nextBtn" class="hidden" onclick="nextQuestion()">Next</button>
+
+</div>
+
+<!-- RESULT -->
+<div class="result hidden" id="resultScreen">
+
+<h2 id="resultTitle">Result</h2>
+<p id="resultScore"></p>
+
+<button onclick="retryGame()">Play Again</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
